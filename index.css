@@ -1,0 +1,31 @@
+@charset "UTF-8";
+  
+*{margin: 0px;padding: 0px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+main{ background-color: rgb(159, 64, 20);
+ height: 100vh;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-flow: column wrap;
+}
+
+article{
+    background-color: white;
+    padding: 15%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px black;
+}
+
+article:hover{
+    box-shadow: 2px 2px 4px rgb(246, 158, 158);
+    transform: rotate(2deg);
+}
+
+a{
+    color: rgb(219, 46, 46);
+    text-decoration: none;
+    font-weight: 900;
+}
