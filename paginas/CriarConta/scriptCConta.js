@@ -59,7 +59,14 @@ const nom=document.getElementById("nome").value
  const emai=document.getElementById("email").value
  const tel=document.getElementById("tell").value
  const pass=document.getElementById("senha").value
- const user={
+
+  const user2=JSON.parse(localStorage.getItem("usuario"))
+
+ if(emai==user2.gmail || tel==user2.phone){
+   alert("O email ou numero de telefone já estão logados numa outra conta, inicia sessão!")
+ }else{
+   form.action="../Home/home.html"
+   const user={
    name:nom, surname:Snom, gmail:emai, phone:tel,password:pass 
  }
  
@@ -69,6 +76,10 @@ const nom=document.getElementById("nome").value
  Snome.value=" "
  email.value=" "
  pass.value=" "
+ }
+ 
+
+ 
 
     })
  

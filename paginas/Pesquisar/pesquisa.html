@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="pesquisaStyle.css">
+      <script src="https://kit.fontawesome.com/f220fb1464.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+    <aside class="divH">
+      <h1>E-Commmerce</h1>
+      <div>
+        <a href="../informacaoDev/info.html"><i class="fa-solid fa-circle-info fa-2xl" style="color: rgb(242, 244, 246); "></i></a>
+        <a href="#"><i class="fa-solid fa-bars fa-2xl" style="color: rgb(242, 244, 246);"></i></a>
+      </div>
+    </aside>
+    <nav>
+      <a href="../Home/home.html"><i class="fa-solid fa-house-user fa-xl" style="color: rgb(242, 244, 246); "></i></a> 
+      <a href="../Carrinho/carrinho.html" ><i class="fa-solid fa-cart-flatbed fa-xl" style="color: rgb(242, 244, 246);"></i></a>
+       <a href="#"><i class="fa-regular fa-heart fa-lg" style="color: rgb(242, 244, 246);"></i></a>
+       <a href="../Perfil/perfil.html"><i class="fa-solid fa-user fa-xl" style="color: rgb(242, 244, 246);"></i></a>
+       <a href="pesquisa.html"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: rgb(242, 244, 246);"></i></a>
+    </nav>
+  </header>
+
+
+    <main>
+     <article>
+         <section class="infoPesquisa">
+          <div>
+              <label for="search"><p><input type="search" name="" id="search" placeholder="Nome do produto"></p></label>
+              <select name="" id="Categoria">
+                <option value="all">====Todas as categorias====</option>
+                <option value="Vestuario">Vestuário</option>
+                <option value="Eletronico">Eletrónico</option>
+                <option value="Material-Escolar">Material Escolar</option>
+              </select>
+          </div>
+          <div>
+            <button id="btnPesquisar">Pesquisar</button>
+             <select name="" id="ordenacao">
+                <option value="all">===== Sem ordenação =====</option>
+                <option value="a-b">menor preço-maior preço</option>
+                <option value="b-a">maior preço-menor preço</option>
+             </select>
+          </div>
+         </section>
+
+  <h2 id="info"></h2>
+         <section id="produtos" class="produtos">
+         
+         </section>
+     </article>
+
+    </main>
+    <form action="../Carrinho/carrinho.html" id="card" class="card">
+ 
+    <button type="submit" id="VerCarrinho" onclick="botaoCarrinho()">Adicionar e Finalizar Carrinho</button>
+   
+</form>
+</body>
+</html>
+<script src="pesquisaScript.js"></script>

@@ -9,18 +9,19 @@ main{
    height: 100vh;
 }
 
-section{
+ section{
     background-color: white;
-  
   width: 70%;
   padding: 10px;
   border-radius: 5px;
+   box-shadow:  3px 5px 6px rgb(0, 0, 0);
 }
 
 form{
  display: flex;
  flex-flow: column nowrap;
  justify-content: center;
+
 }
 
 p{
@@ -51,7 +52,7 @@ button{
     border-color: white;
     cursor: pointer;
     width: 100%;
-  display: none
+  
 }
 
 p{

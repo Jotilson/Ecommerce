@@ -13,7 +13,7 @@
     {nome:"Tablet",preco:120,Categoria:"Eletronico"},
     {nome:"Pc hp",preco:250,Categoria:"Eltronico"}
  ]
-
+  localStorage.setItem("Produtos",JSON.stringify(produtos))
  produtos.forEach(prod=>{
    artc.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
@@ -32,6 +32,7 @@
   const carrinho=[]
   const totProd=document.getElementById("totProd")
  const soma=0
+ 
  artc.addEventListener("click",function(e){
 
 const cards=e.target.closest(".aside")   
@@ -42,13 +43,10 @@ const cards=e.target.closest(".aside")
    const nomeProdu=cards.querySelector(".ProdNome").textContent
   
    const prodPrice=+cards.querySelector(".PrecProd").textContent
-   
-
    carrinho.push({nome:nomeProdu,preco:prodPrice})
    
-        btnCarriho.innerHTML+=`<p>${nomeProdu}<p> <p>${prodPrice}</p>`
+        btnCarriho.innerHTML+=`<p>${nomeProdu}<p>`
    }
-  
  })
  
  const verCarrinho=document.getElementById("VerCarrinho")
