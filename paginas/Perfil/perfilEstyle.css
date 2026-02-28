@@ -4,7 +4,7 @@
 
 header{
   background-image: linear-gradient(to bottom,rgb(197, 75, 19),rgb(125, 43, 5) );
-  height: 20vh;
+  padding: 10px;
   margin-bottom:0.1%;
 }
 .divH{display: flex;align-items: center;justify-content: space-between;}
@@ -43,7 +43,6 @@ height: 50vh;
 .info{
     width: 100%;
     background-color: rgb(216, 214, 214);
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
