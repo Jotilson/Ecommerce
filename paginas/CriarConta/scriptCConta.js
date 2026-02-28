@@ -61,21 +61,32 @@ const nom=document.getElementById("nome").value
  const pass=document.getElementById("senha").value
 
   const user2=JSON.parse(localStorage.getItem("usuario"))
-
- if(emai==user2.gmail || tel==user2.phone){
+  console.log(user2)
+ if(user2!=null){
+if(emai==user2.gmail || tel==user2.phone){
    alert("O email ou numero de telefone já estão logados numa outra conta, inicia sessão!")
  }else{
    form.action="../Home/home.html"
    const user={
    name:nom, surname:Snom, gmail:emai, phone:tel,password:pass 
  }
+  localStorage.setItem("usuario",JSON.stringify(user))
  
- localStorage.setItem("usuario",JSON.stringify(user))
+ }
+ 
+ 
  nome2.value=" "
  tell.value=0
  Snome.value=" "
  email.value=" "
  pass.value=" "
+ }else{
+   form.action="../Home/home.html"
+   const user={
+   name:nom, surname:Snom, gmail:emai, phone:tel,password:pass 
+ }
+  localStorage.setItem("usuario",JSON.stringify(user))
+
  }
  
 
