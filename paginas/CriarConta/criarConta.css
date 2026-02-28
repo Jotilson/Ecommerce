@@ -22,6 +22,9 @@ form{
  flex-flow: column nowrap;
  justify-content: center;
 }
+div i{
+   
+}
 p{
     margin-bottom: 2%;
    display: flex;
@@ -36,7 +39,7 @@ div{
 }
 
 input{
-    width: 90%;
+    width: 80%;
 height: 7vh;
 border-radius: 13px;
 border-color: rgba(230, 196, 196, 0.355);
