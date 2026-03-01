@@ -46,7 +46,7 @@ article{
    box-shadow: 1.5px 3px 4px rgb(95, 4, 4);
 }
 
-#plus{
+.plus{
   
   cursor: pointer;
 }

@@ -20,9 +20,9 @@ carrinho.forEach(produto=> {
 </div>
 <br>
   <div class="plus2">
-   <span><i class="fa-solid fa-plus fa-lg" style="color: rgb(246, 243, 243);" id="plus"></i></span>
-   <p id="tot">0</p>
-   <span><i class="fa-solid fa-minus fa-lg" style="color: rgb(246, 243, 243);" id="minus"></i></span>
+   <span class="plus"><i class="fa-solid fa-plus fa-lg" style="color: rgb(246, 243, 243);" ></i></span>
+   <p class="tot">0</p>
+   <span  class="minus"><i class="fa-solid fa-minus fa-lg" style="color: rgb(246, 243, 243);"></i></span>
    </div>
    </aside>`
 });
@@ -33,27 +33,44 @@ esvazir.addEventListener("click",function(){
     localStorage.removeItem("Carrinho")
     location.reload();
 })
-let total=document.getElementById("tot")
-let soma=0
-const plus=document.getElementById("plus")
-const menos=document.getElementById("minus")
 
-plus.addEventListener("click",function(){
-    
+
+const plus=document.querySelectorAll(".plus")
+const menos=document.querySelectorAll(".minus")
+
+ plus.forEach(mais=>{
+   
+  mais.addEventListener("click",function(e){
+   const card2=e.target.closest(".aside")
+let soma=Number(card2.querySelector(".tot").textContent)
+    let total=card2.querySelector(".tot")
  soma=soma+1
 
     console.log(soma)
-  total.textContent=soma
-})
+   total.textContent=soma
 
- menos.addEventListener("click",function(){
-    if(soma<=0){
+})
+ })
+
+ menos.forEach(minus=>{
+  
+  minus.addEventListener("click",function(e){
+   const card3=e.target.closest(".aside")
+   let soima=Number(card3.querySelector(".tot").textContent)
+    let total=card3.querySelector(".tot")
+     if(soima<=0){
         alert("Não tem como dimunuir!")
     }else{
-    soma=soma-1
-    total.textContent=soma
+    soima=soima-1
+    total.textContent=soima
     }
+    
+    
+})
+
  })
+
+ 
 
  const reciclagem=document.querySelectorAll(".lixo")
 
