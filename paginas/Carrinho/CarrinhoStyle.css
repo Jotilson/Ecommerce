@@ -34,8 +34,7 @@ article{
 }
 .aside{
   background-color: rgb(197, 75, 19);
-  width: 350px;
-  height: 20vh;
+  width: 250px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -45,10 +44,30 @@ article{
    font-weight: 700;
    color: white;
    box-shadow: 1.5px 3px 4px rgb(95, 4, 4);
-   cursor: pointer;
 }
-.aside:active{
-  background-color: rgb(243, 105, 42);
+
+#plus{
+  
   cursor: pointer;
 }
+
+#minus{
+  cursor: pointer;
+}
+
+img{
+  width: 150px;
+  border-radius: 5px;
+}
+
+ .divPreco{
+   display: flex;
+}
+.div{
+   display: flex;
+}
+.plus2{
+  display: flex;
+}
+.lixo{cursor: pointer;}
 
