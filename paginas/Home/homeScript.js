@@ -7,9 +7,9 @@
     {nome:"Sapato da Nike",preco:10,Categoria:"Vestuario"},
     {nome:"Caderno",preco:10,Categoria:"Material-Escolar"},
     {nome:"Canetas",preco:10,Categoria:"Material-Escolar"},
-    {nome:"Muchila",preco:10,Categoria:"Material-Escolar"},
-    {nome:"Compasso",preco:10,Categoria:"Material-Escolar"},
-    {nome:"XIOME",preco:100,Categoria:"Eletronico"},
+    {nome:"Mochila",preco:10,Categoria:"Material-Escolar"},
+    {nome:"Estojo",preco:10,Categoria:"Material-Escolar"},
+    {nome:"XIAOMI",preco:100,Categoria:"Eletronico"},
     {nome:"Tablet",preco:120,Categoria:"Eletronico"},
     {nome:"Pc hp",preco:250,Categoria:"Eletronico"}
  ]
