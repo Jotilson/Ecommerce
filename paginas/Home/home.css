@@ -24,7 +24,7 @@ article{
  width: 98%;
    background-color: white;
    display: grid;
-   grid-template-columns: repeat(2,auto);
+   grid-template-columns: repeat(1,auto);
    grid-template-rows: repeat(2,250px);
    grid-auto-rows: 400px;
    grid-auto-columns: auto;
@@ -35,7 +35,7 @@ article{
 
 .aside{
   background-color: rgb(197, 75, 19);
-  width: 200px;
+  width: 300px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
