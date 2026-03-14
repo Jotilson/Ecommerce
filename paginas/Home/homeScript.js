@@ -1,23 +1,24 @@
  const artc=document.getElementById("art")
 
  const produtos=[
-    {nome:"Camisa",preco:10,Categoria:"Vestuario"},
-    {nome:"Calção",preco:15,Categoria:"Vestuario"},
-    {nome:"Calça",preco:10,Categoria:"Vestuario"},
-    {nome:"Sapato da Nike",preco:10,Categoria:"Vestuario"},
-    {nome:"Caderno",preco:10,Categoria:"Material-Escolar"},
-    {nome:"Canetas",preco:10,Categoria:"Material-Escolar"},
-    {nome:"Mochila",preco:10,Categoria:"Material-Escolar"},
-    {nome:"Estojo",preco:10,Categoria:"Material-Escolar"},
-    {nome:"XIAOMI",preco:100,Categoria:"Eletronico"},
-    {nome:"Tablet",preco:120,Categoria:"Eletronico"},
-    {nome:"Pc hp",preco:250,Categoria:"Eletronico"}
+    {nome:"Camisa",preco:10,Categoria:"Vestuario", url:"../ImagensProdutos/camisa.jpg"},
+{nome:"Caderno",preco:10,Categoria:"Material-Escolar", url:"../ImagensProdutos/caderno.jpg"},
+{nome:"Canetas",preco:10,Categoria:"Material-Escolar", url:"../ImagensProdutos/canetas.jpg"},
+{nome:"Estojo",preco:10,Categoria:"Material-Escolar", url:"../ImagensProdutos/estojo.jpg"},
+{nome:"Pc hp",preco:250,Categoria:"Eletronico", url:"../ImagensProdutos/hp.jpg"},
+{nome:"XIAOMI",preco:100,Categoria:"Eletronico", url:"../ImagensProdutos/XIAOMI.png"},
+{nome:"Calção",preco:15,Categoria:"Vestuario", url:"../ImagensProdutos/calcao.jpg"},
+{nome:"Calça",preco:10,Categoria:"Vestuario", url:"../ImagensProdutos/calca.jpg"},
+{nome:"Sapato da Nike",preco:10,Categoria:"Vestuario", url:"../ImagensProdutos/nike.jpg"},
+{nome:"Mochila",preco:10,Categoria:"Material-Escolar", url:"../ImagensProdutos/mochila.jpg"},
+{nome:"Tablet",preco:120,Categoria:"Eletronico", url:"../ImagensProdutos/tablet.jpg"}
+    
  ]
   localStorage.setItem("Produtos",JSON.stringify(produtos))
  produtos.forEach(prod=>{
    artc.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src="imgEx.png" alt="" id="img">
+   <img src=${prod.url} alt="" id="img" class="imgm">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>
@@ -43,7 +44,9 @@ const cards=e.target.closest(".aside")
    const nomeProdu=cards.querySelector(".ProdNome").textContent
   
    const prodPrice=+cards.querySelector(".PrecProd").textContent
-   carrinho.push({nome:nomeProdu,preco:prodPrice})
+   const prodImg=cards.querySelector(".imgm")
+   const prodURL=prodImg.src
+   carrinho.push({nome:nomeProdu,preco:prodPrice,url:prodURL})
    
         btnCarriho.innerHTML+=`<p>${nomeProdu}<p>`
    }

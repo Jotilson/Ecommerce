@@ -13,7 +13,7 @@ carrinho.forEach(produto=> {
     <span class="lixo"><i class="fa-solid fa-trash fa-lg" style="color: rgb(246, 243, 243); " ></i></span>
    </div>
    <br>
-   <img src="imgEx.png" alt="" id="img">
+   <img src=${produto.url} alt="" id="img">
    <div class="divPreco">
    Preço:
    <p class="PrecProd">${Number(produto.preco)}</p>

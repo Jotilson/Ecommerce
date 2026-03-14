@@ -18,7 +18,7 @@ h2.textContent=""
     {
     section.innerHTML=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src="../Home/imgEx.png" alt="" id="img">
+   <img src=${prod.url} alt="" id="img" class="imgm">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>
@@ -39,7 +39,7 @@ h2.textContent=""
     {
     section.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src="../Home/imgEx.png" alt="" id="img">
+   <img src=${prod.url} alt="" id="img" class="imgm">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>
@@ -58,7 +58,7 @@ h2.textContent=""
     {
     section.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src="../Home/imgEx.png" alt="" id="img">
+   <img src=${prod.url} alt="" id="img" class="imgm">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>
@@ -81,7 +81,7 @@ h2.textContent=""
     {
     section.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src="../Home/imgEx.png" alt="" id="img">
+   <img src=${prod.url} alt="" id="img" class="imgm">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>
@@ -133,9 +133,10 @@ const cards=e.target.closest(".aside")
    const nomeProdu=cards.querySelector(".ProdNome").textContent
   
    const prodPrice=+cards.querySelector(".PrecProd").textContent
-   
+   const prodImg=cards.querySelector(".imgm")
+   const prodURL=prodImg.src
 
-   carrinho.push({nome:nomeProdu,preco:prodPrice})
+   carrinho.push({nome:nomeProdu,preco:prodPrice,url:prodURL})
    
         btnCarriho.innerHTML+=`<p>${nomeProdu}<p>`
    }

@@ -1,0 +1,19 @@
+@media screen and (min-width:768px) {
+  .aside{width: 250px;}
+   article{
+    grid-auto-rows: 450px;}
+}
+
+@media screen and (min-width:1200px) {
+  .infoPesquisa{margin-bottom: 10%;}
+  .aside{
+  width: 300px;
+}
+.aside img{
+    width: 140px;
+}
+  article{grid-auto-columns: auto;
+    grid-template-rows: repeat(2,850px);
+    grid-auto-rows: 850px;}
+   
+}
