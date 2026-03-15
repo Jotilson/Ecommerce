@@ -69,6 +69,12 @@ button{width: 170px;}
   background-color: rgb(243, 105, 42);
   cursor: pointer;
 }
+.infoHeart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+}
  
 img{
   width: 100px;

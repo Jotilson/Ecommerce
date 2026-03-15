@@ -17,7 +17,10 @@
   localStorage.setItem("Produtos",JSON.stringify(produtos))
  produtos.forEach(prod=>{
    artc.innerHTML+=`<aside class="aside">
+   <div class="infoHeart">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
+   <span class="heart"><i class="fa-solid fa-heart fa-2xl" style="color: rgb(246, 243, 243);" id="coracao"></i></span>
+   </div>
    <img src=${prod.url} alt="" id="img" class="imgm">
    <div class="divPreco">
    <p>Preço:</p>
@@ -51,6 +54,34 @@ const cards=e.target.closest(".aside")
         btnCarriho.innerHTML+=`<p>${nomeProdu}<p>`
    }
  })
+
+ const heart=document.querySelectorAll(".heart")
+ 
+  heart.forEach(coracao=>{
+  coracao.addEventListener("click",function(e){
+
+   const cards=e.target.closest(".aside")
+   const cor=cards.querySelectorAll("#coracao")
+   console.log(cor)
+
+   cor.forEach(cor2=>{
+      cor2.addEventListener("click",function(e){
+         if(cor2.style.color=='red'){
+            cor2.style.color='white'
+         }else{
+  cor2.style.color='red'
+         }
+ 
+   
+
+      })
+   })
+   
+  })
+
+  })
+  
+ 
  
  const verCarrinho=document.getElementById("VerCarrinho")
 

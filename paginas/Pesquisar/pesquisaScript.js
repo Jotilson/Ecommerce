@@ -39,7 +39,7 @@ h2.textContent=""
     {
     section.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src=${prod.url} alt="" id="img" class="imgm">
+   <img src=${prod.url} alt="" id="img">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>
@@ -58,7 +58,7 @@ h2.textContent=""
     {
     section.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src=${prod.url} alt="" id="img" class="imgm">
+   <img src=${prod.url} alt="" id="img">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>
@@ -81,7 +81,7 @@ h2.textContent=""
     {
     section.innerHTML+=`<aside class="aside">
    <div class="div"><p class="ProdNome">${prod.nome}</p></div>
-   <img src=${prod.url} alt="" id="img" class="imgm">
+   <img src=${prod.url} alt="" id="img">
    <div class="divPreco">
    <p>Preço:</p>
    <p class="PrecProd">${Number(prod.preco)}</p>

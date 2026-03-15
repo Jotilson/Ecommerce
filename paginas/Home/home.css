@@ -25,8 +25,7 @@ article{
    background-color: white;
    display: grid;
    grid-template-columns: repeat(1,auto);
-   grid-template-rows: repeat(2,250px);
-   grid-auto-rows: 400px;
+    gap: 50px;
    grid-auto-columns: auto;
    justify-content: space-around;
   align-items: center;
@@ -40,12 +39,18 @@ article{
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
-   border-radius: 10px;
+  padding: 10px;
+   border-radius: 7px;
    font-weight: 700;
    color: white;
    box-shadow: 1.5px 3px 4px rgb(95, 4, 4);
    cursor: pointer;
+}
+.infoHeart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
 }
 
  
