@@ -54,31 +54,29 @@ const cards=e.target.closest(".aside")
         btnCarriho.innerHTML+=`<p>${nomeProdu}<p>`
    }
  })
-
+  //Favoritos
  const heart=document.querySelectorAll(".heart")
- 
+ let PFavorite=[]
   heart.forEach(coracao=>{
   coracao.addEventListener("click",function(e){
-
+  
    const cards=e.target.closest(".aside")
-   const cor=cards.querySelectorAll("#coracao")
-   console.log(cor)
-
-   cor.forEach(cor2=>{
-      cor2.addEventListener("click",function(e){
-         if(cor2.style.color=='red'){
-            cor2.style.color='white'
+   const cor=cards.querySelector("#coracao")
+   const nome=cards.querySelector(".ProdNome").textContent
+   const preco=cards.querySelector(".PrecProd").textContent
+   const img=cards.querySelector(".imgm")
+   const imgURL=img.src
+   
+ if(cor.style.color=='red'){
+            cor.style.color='white'
          }else{
-  cor2.style.color='red'
-         }
- 
-   
-
-      })
-   })
-   
+  cor.style.color='red'
+  const corh="red"
+  PFavorite.push({name:nome,price:preco,url:imgURL,color:corh})
+  localStorage.setItem("PrFavorite",JSON.stringify(PFavorite))
+         }   
   })
-
+  
   })
   
  
